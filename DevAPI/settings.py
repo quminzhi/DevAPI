@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'stylizer.apps.StylizerConfig',
     
     'rest_framework',
     "corsheaders",

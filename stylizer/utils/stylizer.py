@@ -120,18 +120,18 @@ def stylizer(uid, path_to_origin, path_to_style):
         cwd + '/stylizer/models')
 
     # TODO: Local test
-    content_image = load_image(
-        cwd + '/static/images/test/origins/tubingen.jpg')
-    style_image = load_image(
-        cwd + '/static/images/test/styles/starry-night.jpg')
+    # content_image = load_image(
+    #     cwd + '/static/images/test/origins/tubingen.jpg')
+    # style_image = load_image(
+    #     cwd + '/static/images/test/styles/starry-night.jpg')
 
-    # # Load image from users
-    # content_path = tf.keras.utils.get_file(
-    #     cwd + '/static/images/users/origin-image-' + str(uid) + '.jpg', path_to_origin)
-    # style_path = tf.keras.utils.get_file(
-    #     cwd + '/static/images/users/style-image-' + str(uid) + '.jpg', path_to_style)
-    # content_image = load_image(content_path)
-    # style_image = load_image(style_path)
+    # Load image from users
+    content_path = tf.keras.utils.get_file(
+        cwd + '/static/images/users/origin-image-' + str(uid) + '.jpg', path_to_origin)
+    style_path = tf.keras.utils.get_file(
+        cwd + '/static/images/users/style-image-' + str(uid) + '.jpg', path_to_style)
+    content_image = load_image(content_path)
+    style_image = load_image(style_path)
 
     # Decompose and Reconstruct
     stylized_image = model(tf.constant(content_image),
