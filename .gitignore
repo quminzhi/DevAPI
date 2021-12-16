@@ -170,4 +170,3 @@ cython_debug/
 ist/__pycache__/
 # db.sqlite3
 stylized/
-stylizer/models/
