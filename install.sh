@@ -32,6 +32,8 @@ pip install django-cors-headers
 pip install opencv-python
 sudo apt-get install ffmpeg libsm6 libxext6 -y
 pip install pillow
+sudo apt-get install libpq-dev python-dev
+pip install psycopg2
 
 # django
 python manage.py makemigrations
